@@ -21,6 +21,9 @@ returncode_t libtock_led_off(int led_num);
 // Toggle the specified LED.
 returncode_t libtock_led_toggle(int led_num);
 
+// RGB LED helpers (if supported by the platform).
+returncode_t libtock_rgb_led_set(uint8_t red, uint8_t green, uint8_t blue);
+
 #ifdef __cplusplus
 }
 #endif

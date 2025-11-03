@@ -29,3 +29,10 @@ returncode_t libtock_led_command_toggle(int led_num) {
   syscall_return_t rval = command(DRIVER_NUM_LED, 3, led_num, 0);
   return tock_command_return_novalue_to_returncode(rval);
 }
+
+returncode_t libtock_rgb_led_command_set(uint8_t red, uint8_t green, uint8_t blue) {
+  syscall_return_t rval = command(DRIVER_NUM_LED, 5, 0, red);
+  command(DRIVER_NUM_LED, 5, 1, green);
+  command(DRIVER_NUM_LED, 5, 2, blue);
+  return tock_command_return_novalue_to_returncode(rval);
+}

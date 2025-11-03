@@ -23,6 +23,8 @@ returncode_t libtock_led_command_off(int led_num);
 // Toggle the LED specified by index.
 returncode_t libtock_led_command_toggle(int led_num);
 
+returncode_t libtock_rgb_led_command_set(uint8_t red, uint8_t green, uint8_t blue);
+
 #ifdef __cplusplus
 }
 #endif
